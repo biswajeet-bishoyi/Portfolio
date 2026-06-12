@@ -49,6 +49,15 @@ const PROJECTS = [
     image: "/images/building.png",
     tags: ["Research", "Material Science", "Sustainability"],
     links: { live: "#" }
+  },
+  {
+    id: 6,
+    title: "OPHWC Civil Engineering Project",
+    category: "Engineering",
+    description: "Hands-on civil engineering internship involving AutoCAD drafting for F-Type residential layouts, comprehensive cost estimation for 3 major public bus stands, and site execution monitoring at Excise Bhawan, Bhubaneswar.",
+    image: "/images/building.png",
+    tags: ["AutoCAD", "Cost Estimation", "Site Execution", "Tendering"],
+    links: { live: "https://drive.google.com/file/d/15dmI1QnzFciv6MjID9beAqPhZro7y0Zp/view?usp=sharing" }
   }
 ]
 

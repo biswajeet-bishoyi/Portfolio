@@ -2,14 +2,16 @@
 
 import { motion } from "framer-motion"
 import { fadeUp, staggerContainer } from "@/lib/animations"
-import { Briefcase, GraduationCap, Calendar } from "lucide-react"
+import { Briefcase, GraduationCap, Calendar, ExternalLink } from "lucide-react"
 
 const EXPERIENCE = [
   {
-    title: "Student Intern",
-    organization: "The Odisha State Police Housing & Welfare Corporation Ltd.",
+    title: "Civil Engineering Intern",
+    organization: "Odisha Police Housing & Welfare Corporation",
     period: "Dec 2025 - Jan 2026",
-    description: "Student internship in Bhubaneswar, Odisha."
+    description: "Conducted comprehensive AutoCAD drafting for F-Type residential quarters and estimated costs for 3 major public bus stands. Monitored post-tender site execution and safety practices at the Excise Bhawan project in Bhubaneswar.",
+    link: "https://drive.google.com/file/d/15dmI1QnzFciv6MjID9beAqPhZro7y0Zp/view?usp=sharing",
+    linkText: "View Internship Report"
   },
   {
     title: "S.M.ASCE",
@@ -57,6 +59,8 @@ type TimelineItemProps = {
   organization: string;
   period: string;
   description: string;
+  link?: string;
+  linkText?: string;
 }
 
 function TimelineItem({ item, isLast }: { item: TimelineItemProps, isLast: boolean }) {
@@ -85,6 +89,17 @@ function TimelineItem({ item, isLast }: { item: TimelineItemProps, isLast: boole
             <span>{item.period}</span>
           </div>
           <p className="text-muted-foreground text-body">{item.description}</p>
+          {item.link && (
+            <a 
+              href={item.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              {item.linkText || "View Project"}
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          )}
         </div>
       </div>
     </div>
