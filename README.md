@@ -1,6 +1,6 @@
 # Biswajeet Bishoyi - Personal Portfolio 🚀
 
-![Portfolio Preview](./public/images/profile.png)
+![Biswajeet Bishoyi](./public/images/my-photo.jpeg)
 
 A modern, highly-responsive, and interactive personal portfolio website for **Biswajeet Bishoyi**—a Civil Engineering student, Graphic Designer, and Coding Enthusiast based in Bhubaneswar, Odisha.
 
