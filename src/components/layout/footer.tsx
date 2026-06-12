@@ -1,5 +1,5 @@
 import Link from "next/link"
-
+import { Heart } from "lucide-react"
 export function Footer() {
   return (
     <footer className="bg-[#050505] text-white py-16 border-t border-white/5 mt-auto relative z-10">
@@ -41,9 +41,9 @@ export function Footer() {
 
         </div>
 
-        <div className="mt-20 pt-8 flex justify-center">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Biswajeet Bishoyi. All rights reserved.
+        <div className="mt-20 pt-8 flex justify-center items-center">
+          <p className="text-sm text-gray-500 flex items-center gap-1.5">
+            © {new Date().getFullYear()} Biswajeet Bishoyi <Heart className="h-4 w-4 text-red-500 fill-red-500" /> All rights reserved.
           </p>
         </div>
       </div>
