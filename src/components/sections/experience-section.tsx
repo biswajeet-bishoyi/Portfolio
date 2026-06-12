@@ -52,7 +52,18 @@ const EDUCATION = [
   }
 ]
 
-function TimelineItem({ item, isLast }: { item: any, isLast: boolean }) {
+type TimelineItemProps = {
+  id: number;
+  role?: string;
+  company?: string;
+  degree?: string;
+  institution?: string;
+  period: string;
+  description: string;
+  current?: boolean;
+}
+
+function TimelineItem({ item, isLast }: { item: TimelineItemProps, isLast: boolean }) {
   return (
     <div className="relative pl-8 md:pl-0">
       {/* Desktop Timeline Line */}
