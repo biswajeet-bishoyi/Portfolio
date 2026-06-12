@@ -10,16 +10,31 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true }) // Silent success for bots
     }
 
-    // In a real application, you would integrate Resend, Nodemailer, or another email service here.
-    // Example:
-    // await sendEmail({ to: "hello@biswajeetbishoyi.com", subject, html: `From: ${name} <${email}><br><br>${message}` })
-    
-    // For now, we simulate a successful email send.
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    // Forward the form data to Formspree
+    const response = await fetch("https://formspree.io/f/xlgkordk", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        subject,
+        message,
+      }),
+    });
 
-    console.log("Form submission received:", { name, email, subject, message })
-
-    return NextResponse.json({ success: true })
+    if (response.ok) {
+      console.log("Formspree submission successful");
+      return NextResponse.json({ success: true });
+    } else {
+      console.error("Formspree submission failed", await response.text());
+      return NextResponse.json(
+        { error: "Failed to send message to Formspree" },
+        { status: 500 }
+      );
+    }
   } catch (error) {
     console.error("[Contact API Error]", error)
     return NextResponse.json(
