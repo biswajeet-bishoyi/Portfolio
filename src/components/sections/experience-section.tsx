@@ -53,14 +53,10 @@ const EDUCATION = [
 ]
 
 type TimelineItemProps = {
-  id: number;
-  role?: string;
-  company?: string;
-  degree?: string;
-  institution?: string;
+  title: string;
+  organization: string;
   period: string;
   description: string;
-  current?: boolean;
 }
 
 function TimelineItem({ item, isLast }: { item: TimelineItemProps, isLast: boolean }) {
