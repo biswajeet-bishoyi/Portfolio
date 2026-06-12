@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Biswajeet Bishoyi - Personal Portfolio 🚀
 
-## Getting Started
+![Portfolio Preview](./public/images/profile.png)
 
-First, run the development server:
+A modern, highly-responsive, and interactive personal portfolio website for **Biswajeet Bishoyi**—a Civil Engineering student, Graphic Designer, and Coding Enthusiast based in Bhubaneswar, Odisha.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Built to showcase the unique intersection of structural engineering, aesthetic design, and software development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🌐 Live Demo: [biswajeetbishoyi.vercel.app](https://biswajeetbishoyi.vercel.app)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+This portfolio was built with a focus on performance, modern aesthetics, and seamless animations.
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router, React 19)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/) & Lenis Smooth Scrolling
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Forms:** React Hook Form & Formspree Integration
+- **Deployment:** [Vercel](https://vercel.com)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Key Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Dark Mode Aesthetic:** A sleek, premium dark theme with glowing gradients and ambient background effects.
+- **Smooth Scrolling:** Integrated Lenis for a buttery-smooth scrolling experience across all devices.
+- **Micro-Animations:** Powered by Framer Motion for fade-ups, staggered lists, and interactive hover states.
+- **Responsive Design:** Completely optimized for mobile, tablet, and desktop viewports.
+- **Interactive Timeline:** A custom-built vertical timeline showcasing education and professional experience.
+- **Live Contact Form:** Fully functional contact form protected by honeypots and routed securely via Formspree.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💻 Running Locally
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you'd like to run this project on your local machine, follow these steps:
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/biswajeet-bishoyi/Portfolio.git
+   cd Portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **View the app**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 📬 Connect With Me
+
+- **LinkedIn:** [linkedin.com/in/biswajeetbishoyi](https://linkedin.com/in/biswajeetbishoyi)
+- **GitHub:** [@biswajeet-bishoyi](https://github.com/biswajeet-bishoyi)
+- **Email:** [bishoyibiswajeet@gmail.com](mailto:bishoyibiswajeet@gmail.com)
+
+---
+*Designed & Built with ❤️ by Biswajeet Bishoyi*
