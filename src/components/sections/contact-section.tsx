@@ -146,7 +146,7 @@ export function ContactSection() {
                       id="name" 
                       placeholder="John Doe" 
                       {...register("name")}
-                      className={errors.name ? "border-destructive focus-visible:ring-destructive" : ""}
+                      className={`h-12 ${errors.name ? "border-destructive focus-visible:ring-destructive" : ""}`}
                     />
                     {errors.name && <p className="text-xs text-destructive">{errors.name.message}</p>}
                   </div>
@@ -158,7 +158,7 @@ export function ContactSection() {
                       type="email" 
                       placeholder="john@example.com" 
                       {...register("email")}
-                      className={errors.email ? "border-destructive focus-visible:ring-destructive" : ""}
+                      className={`h-12 ${errors.email ? "border-destructive focus-visible:ring-destructive" : ""}`}
                     />
                     {errors.email && <p className="text-xs text-destructive">{errors.email.message}</p>}
                   </div>
@@ -167,14 +167,14 @@ export function ContactSection() {
                 <div className="space-y-2">
                   <Label htmlFor="subject">Subject</Label>
                   <Select onValueChange={(val: string | null) => setValue("subject", val || "")}>
-                    <SelectTrigger className={errors.subject ? "border-destructive focus-visible:ring-destructive" : ""}>
+                    <SelectTrigger className={`h-12 ${errors.subject ? "border-destructive focus-visible:ring-destructive" : ""}`}>
                       <SelectValue placeholder="Select a subject" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="freelance">Freelance Design Project</SelectItem>
-                      <SelectItem value="engineering">Engineering Consultation / Collaboration</SelectItem>
-                      <SelectItem value="internship">Internship Opportunity</SelectItem>
-                      <SelectItem value="other">Other Inquiry</SelectItem>
+                      <SelectItem value="freelance" className="py-3 cursor-pointer">Freelance Design Project</SelectItem>
+                      <SelectItem value="engineering" className="py-3 cursor-pointer">Engineering Consultation / Collaboration</SelectItem>
+                      <SelectItem value="internship" className="py-3 cursor-pointer">Internship Opportunity</SelectItem>
+                      <SelectItem value="other" className="py-3 cursor-pointer">Other Inquiry</SelectItem>
                     </SelectContent>
                   </Select>
                   {/* Hidden input for react-hook-form to track validation */}
@@ -189,7 +189,7 @@ export function ContactSection() {
                     placeholder="Tell me about your project or inquiry..." 
                     rows={5}
                     {...register("message")}
-                    className={`resize-none ${errors.message ? "border-destructive focus-visible:ring-destructive" : ""}`}
+                    className={`resize-none p-4 ${errors.message ? "border-destructive focus-visible:ring-destructive" : ""}`}
                   />
                   {errors.message && <p className="text-xs text-destructive">{errors.message.message}</p>}
                 </div>
