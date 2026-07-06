@@ -24,6 +24,15 @@ const PROJECTS = [
     links: { github: "https://github.com/biswajeet-bishoyi/BeamLab" }
   },
   {
+    id: 8,
+    title: "Apex Precision: Max Verstappen 3D",
+    category: "Technology",
+    description: "A highly cinematic, interactive 3D web experience celebrating Max Verstappen. Built with Three.js and React Three Fiber, featuring scroll-linked camera choreography around a detailed 3D model of the RB20, dynamic depth of field, and minimalist typography.",
+    image: "/images/building.png",
+    tags: ["Three.js", "React Three Fiber", "GSAP", "Next.js"],
+    links: { github: "https://github.com/biswajeet-bishoyi/Apex-Precision" }
+  },
+  {
     id: 1,
     title: "AI-Powered Soil Property Predictor",
     category: "Technology",
