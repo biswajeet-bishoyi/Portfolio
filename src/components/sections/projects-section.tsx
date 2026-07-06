@@ -21,7 +21,7 @@ const PROJECTS = [
     description: "An interactive, next-generation structural engineering workspace. Features real-time structural analysis (shear/moment/deflection), an AI Engineering Studio (\"Archie\"), a Time Machine feature for tracking design evolution, and a cinematic Presentation mode.",
     image: "/images/beamlab.png",
     tags: ["React", "TypeScript", "Tailwind CSS", "AI"],
-    links: { github: "https://github.com/biswajeet-bishoyi/BeamLab" }
+    links: { github: "https://github.com/biswajeet-bishoyi/BeamLab", live: "https://beamstudio.vercel.app/" }
   },
   {
     id: 8,
@@ -30,7 +30,7 @@ const PROJECTS = [
     description: "A highly cinematic, interactive 3D web experience celebrating Max Verstappen. Built with Three.js and React Three Fiber, featuring scroll-linked camera choreography around a detailed 3D model of the RB20, dynamic depth of field, and minimalist typography.",
     image: "/images/apex.png",
     tags: ["Three.js", "React Three Fiber", "GSAP", "Next.js"],
-    links: { github: "https://github.com/biswajeet-bishoyi/Apex-Precision" }
+    links: { github: "https://github.com/biswajeet-bishoyi/Apex-Precision", live: "https://apex-precision-f1.vercel.app/" }
   },
   {
     id: 1,
