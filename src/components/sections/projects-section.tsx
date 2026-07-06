@@ -19,7 +19,7 @@ const PROJECTS = [
     title: "BeamLab 🏗️",
     category: "Technology",
     description: "An interactive, next-generation structural engineering workspace. Features real-time structural analysis (shear/moment/deflection), an AI Engineering Studio (\"Archie\"), a Time Machine feature for tracking design evolution, and a cinematic Presentation mode.",
-    image: "/images/building.png",
+    image: "/images/beamlab.png",
     tags: ["React", "TypeScript", "Tailwind CSS", "AI"],
     links: { github: "https://github.com/biswajeet-bishoyi/BeamLab" }
   },
