@@ -89,9 +89,9 @@ export default function RootLayout({
                 falloff="smooth"
                 holdTime={400}
                 fadeDuration={800}
-                lineWidth={1.5}
-                maxOpacity={1}
-                fillOpacity={0.05}
+                lineWidth={1.2}
+                maxOpacity={0.4}
+                fillOpacity={0.02}
                 gridOpacity={0.03}
                 cellRadius={0}
                 clickPulse
