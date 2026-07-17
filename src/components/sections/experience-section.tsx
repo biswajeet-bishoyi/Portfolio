@@ -106,9 +106,11 @@ function TimelineItem({ item, isLast }: { item: TimelineItemProps, isLast: boole
   )
 }
 
+import CardSwap, { Card } from "@/components/ui/card-swap"
+
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-24 md:py-32 bg-surface-alt/30">
+    <section id="experience" className="py-24 md:py-32 bg-surface-alt/30 overflow-hidden">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10">
         <motion.div
           initial="hidden"
@@ -116,6 +118,40 @@ export function ExperienceSection() {
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
         >
+          {/* Intro & CardSwap Area */}
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-8 items-center mb-24">
+            <motion.div variants={fadeUp} className="lg:w-1/2 text-center lg:text-left">
+              <h2 className="text-h2 mb-4">My Journey</h2>
+              <div className="w-20 h-1 bg-gradient-divider mx-auto lg:mx-0" />
+              <p className="text-muted-foreground mt-6 text-body-lg max-w-xl mx-auto lg:mx-0">
+                A timeline of my professional growth, from civil engineering internships to freelance graphic design and academic achievements.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="lg:w-1/2 w-full flex justify-center lg:justify-end relative h-[400px]">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[350px] h-[350px] sm:h-[400px]">
+                <CardSwap
+                  width="100%"
+                  height="100%"
+                  cardDistance={40}
+                  verticalDistance={40}
+                  delay={3000}
+                  pauseOnHover={true}
+                >
+                  <Card>
+                    <img src="/images/building.png" alt="Civil Engineering Internship" className="w-full h-full object-cover" />
+                  </Card>
+                  <Card>
+                    <img src="/images/branding.png" alt="Graphic Design Freelance" className="w-full h-full object-cover" />
+                  </Card>
+                  <Card>
+                    <img src="/images/event.png" alt="ASCE Events" className="w-full h-full object-cover" />
+                  </Card>
+                </CardSwap>
+              </div>
+            </motion.div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             
             {/* Experience Column */}
