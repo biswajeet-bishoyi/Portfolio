@@ -2,12 +2,21 @@
   position: relative;
   border-radius: 0.75rem; /* Match the rounded-xl roughly */
   border: 1px solid hsl(var(--border));
-  background-color: hsl(var(--surface));
-  padding: 1.5rem;
+  background-color: hsl(var(--surface-alt));
+  padding: 1px; /* Gap for the glowing border */
   overflow: hidden;
   --mouse-x: 50%;
   --mouse-y: 50%;
   --spotlight-color: rgba(132, 0, 255, 0.1);
+}
+
+.card-spotlight-content {
+  position: relative;
+  z-index: 10;
+  background-color: hsl(var(--surface));
+  border-radius: inherit;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .card-spotlight::before {
@@ -21,9 +30,10 @@
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
+  z-index: 1;
 }
 
 .card-spotlight:hover::before,
 .card-spotlight:focus-within::before {
-  opacity: 0.6;
+  opacity: 1;
 }

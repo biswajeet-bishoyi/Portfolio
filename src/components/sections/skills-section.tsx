@@ -70,7 +70,7 @@ export function SkillsSection() {
           <motion.div variants={fadeUp} className="w-full">
             <MagicBento 
               bentoData={bentoData}
-              glowColor="132, 0, 255"
+              glowColor="255, 255, 255"
               particleCount={15}
               textAutoHide={false}
               enableTilt={true}

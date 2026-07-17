@@ -139,7 +139,7 @@ export function ExperienceSection() {
                 {EXPERIENCE.map((item, index) => (
                   <div key={index} className="relative pl-8 md:pl-0 z-10">
                     <div className="absolute left-0 md:-left-2 top-2 w-6 h-6 rounded-full bg-surface border-4 border-primary shadow-sm" />
-                    <SpotlightCard className="p-6 transition-shadow shadow-sm hover:shadow-md">
+                    <SpotlightCard className="p-6 transition-shadow shadow-sm hover:shadow-md" spotlightColor="rgba(255, 255, 255, 0.1)">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
                         <span>{item.period}</span>
@@ -172,7 +172,7 @@ export function ExperienceSection() {
                 {EDUCATION.map((item, index) => (
                   <div key={index} className="relative pl-8 md:pl-0 z-10">
                     <div className="absolute left-0 md:-left-2 top-2 w-6 h-6 rounded-full bg-surface border-4 border-primary shadow-sm" />
-                    <SpotlightCard className="p-6 transition-shadow shadow-sm hover:shadow-md">
+                    <SpotlightCard className="p-6 transition-shadow shadow-sm hover:shadow-md" spotlightColor="rgba(255, 255, 255, 0.1)">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
                         <span>{item.period}</span>
