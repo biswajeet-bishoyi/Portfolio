@@ -8,6 +8,7 @@ import { ArrowRight, Download } from "lucide-react"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { fadeUp, staggerContainer } from "@/lib/animations"
+import { ShapeGrid } from "@/components/ui/shape-grid"
 
 export function HeroSection() {
   const ROLES = ["Civil Engineer", "Designer", "Tech Enthusiast"]
@@ -22,8 +23,19 @@ export function HeroSection() {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background Gradient */}
+      {/* Background Gradient & ShapeGrid */}
       <div className="absolute inset-0 z-0 bg-[var(--gradient-hero)] opacity-50 dark:opacity-100 pointer-events-none" />
+      <div className="absolute inset-0 z-0 opacity-30 dark:opacity-50">
+         <ShapeGrid 
+           speed={0.3} 
+           squareSize={50}
+           direction='diagonal'
+           borderColor='rgba(255,255,255,0.1)'
+           hoverFillColor='rgba(255,255,255,0.2)'
+           shape='hexagon'
+           hoverTrailAmount={3}
+         />
+      </div>
 
       <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10 relative z-10 w-full text-center sm:text-left">
         <motion.div
