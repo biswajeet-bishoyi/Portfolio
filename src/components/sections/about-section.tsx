@@ -43,8 +43,8 @@ export function AboutSection() {
                   handle="biswajeet-bishoyi"
                   status="Available for Work"
                   contactText="Get in Touch"
-                  avatarUrl="/images/my-photo.jpeg"
-                  miniAvatarUrl="/images/my-photo.jpeg"
+                  avatarUrl="/images/1784271769055.png"
+                  miniAvatarUrl="/images/1784271769055.png"
                   showUserInfo
                   enableTilt={true}
                   enableMobileTilt
