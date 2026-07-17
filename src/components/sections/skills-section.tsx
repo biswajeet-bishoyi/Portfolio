@@ -6,6 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { HardHat, PenTool, Code2, TrendingUp } from "lucide-react"
 
+import MagicBento, { BentoCardData } from "@/components/ui/magic-bento"
+
 const SKILL_CATEGORIES = [
   {
     title: "Civil Engineering",
@@ -29,6 +31,24 @@ const SKILL_CATEGORIES = [
   }
 ]
 
+const bentoData: BentoCardData[] = SKILL_CATEGORIES.map((cat, index) => ({
+  title: cat.title,
+  label: "Skillset",
+  description: (
+    <div className="flex flex-wrap gap-2 mt-4">
+      {cat.skills.map((skill) => (
+        <Badge 
+          key={skill} 
+          variant="secondary"
+          className="bg-background/50 hover:bg-background/80 text-foreground font-normal py-1.5 px-3 border border-border/50"
+        >
+          {skill}
+        </Badge>
+      ))}
+    </div>
+  )
+}));
+
 export function SkillsSection() {
   return (
     <section id="skills" className="py-24 md:py-32">
@@ -47,38 +67,14 @@ export function SkillsSection() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {SKILL_CATEGORIES.map((category, index) => {
-              const Icon = category.icon
-              return (
-                <motion.div key={category.title} variants={fadeUp}>
-                  <Card className="h-full border-border bg-surface hover:border-primary/50 transition-colors duration-300">
-                    <CardHeader className="pb-4">
-                      <CardTitle className="flex items-center gap-3 text-h3">
-                        <div className="p-2.5 bg-primary/10 rounded-lg text-primary">
-                          <Icon className="h-5 w-5" />
-                        </div>
-                        {category.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex flex-wrap gap-2">
-                        {category.skills.map((skill) => (
-                          <Badge 
-                            key={skill} 
-                            variant="secondary"
-                            className="bg-surface-alt hover:bg-surface-alt text-foreground font-normal py-1.5 px-3"
-                          >
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              )
-            })}
-          </div>
+          <motion.div variants={fadeUp} className="w-full">
+            <MagicBento 
+              bentoData={bentoData}
+              glowColor="132, 0, 255"
+              particleCount={15}
+              textAutoHide={false}
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>
