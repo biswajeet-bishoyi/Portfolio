@@ -8,6 +8,7 @@ import { ArrowRight, Download } from "lucide-react"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { fadeUp, staggerContainer } from "@/lib/animations"
+import { SpecularButton } from "@/components/ui/specular-button"
 
 export function HeroSection() {
   const ROLES = ["Civil Engineer", "Designer", "Tech Enthusiast"]
@@ -53,8 +54,20 @@ export function HeroSection() {
           </motion.p>
           
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center gap-4 justify-center sm:justify-start mb-10">
-            <a href="#projects" className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-auto text-base h-14 px-8 bg-primary text-primary-foreground hover:bg-primary/90")}>
-              View My Work <ArrowRight className="ml-2 h-5 w-5" />
+            <a href="#projects" className="w-full sm:w-auto block">
+              <SpecularButton
+                size="lg"
+                radius={28}
+                tint="#ffffff"
+                tintOpacity={0.03}
+                textColor="#ffffff"
+                lineColor="#ffffff"
+                baseColor="#525252"
+                intensity={1.2}
+                className="w-full sm:w-auto font-medium min-h-[56px]"
+              >
+                View My Work <ArrowRight className="ml-2 h-5 w-5" />
+              </SpecularButton>
             </a>
             <a href="https://drive.google.com/file/d/1B4yx4EbrV6w2_P0RF7SdhD4KBSbiDPm3/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ size: "lg", variant: "outline" }), "w-full sm:w-auto text-base h-14 px-8 border-border hover:bg-muted")}>
               Download Resume <Download className="ml-2 h-5 w-5" />
