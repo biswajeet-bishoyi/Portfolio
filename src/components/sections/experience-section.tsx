@@ -106,6 +106,8 @@ function TimelineItem({ item, isLast }: { item: TimelineItemProps, isLast: boole
   )
 }
 
+import SpotlightCard from "@/components/ui/spotlight-card"
+
 export function ExperienceSection() {
   return (
     <section id="experience" className="py-24 md:py-32 bg-surface-alt/30">
@@ -137,7 +139,7 @@ export function ExperienceSection() {
                 {EXPERIENCE.map((item, index) => (
                   <div key={index} className="relative pl-8 md:pl-0 z-10">
                     <div className="absolute left-0 md:-left-2 top-2 w-6 h-6 rounded-full bg-surface border-4 border-primary shadow-sm" />
-                    <div className="bg-surface p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow">
+                    <SpotlightCard className="p-6 transition-shadow shadow-sm hover:shadow-md">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
                         <span>{item.period}</span>
@@ -145,7 +147,7 @@ export function ExperienceSection() {
                       <h3 className="text-lg font-bold text-foreground font-heading">{item.title}</h3>
                       <div className="text-primary font-medium mb-3">{item.organization}</div>
                       <p className="text-muted-foreground text-body">{item.description}</p>
-                    </div>
+                    </SpotlightCard>
                   </div>
                 ))}
               </div>
@@ -170,7 +172,7 @@ export function ExperienceSection() {
                 {EDUCATION.map((item, index) => (
                   <div key={index} className="relative pl-8 md:pl-0 z-10">
                     <div className="absolute left-0 md:-left-2 top-2 w-6 h-6 rounded-full bg-surface border-4 border-primary shadow-sm" />
-                    <div className="bg-surface p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow">
+                    <SpotlightCard className="p-6 transition-shadow shadow-sm hover:shadow-md">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="h-4 w-4" />
                         <span>{item.period}</span>
@@ -178,7 +180,7 @@ export function ExperienceSection() {
                       <h3 className="text-lg font-bold text-foreground font-heading">{item.title}</h3>
                       <div className="text-primary font-medium mb-3">{item.organization}</div>
                       <p className="text-muted-foreground text-body">{item.description}</p>
-                    </div>
+                    </SpotlightCard>
                   </div>
                 ))}
               </div>
