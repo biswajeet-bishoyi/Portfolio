@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
+import { CursorGrid } from "@/components/ui/cursor-grid";
 
 const sora = Sora({
   subsets: ['latin'],
@@ -81,6 +82,24 @@ export default function RootLayout({
                  
             <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay"
                  style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }} />
+            
+            <div className="absolute inset-0 z-[-1]">
+              <CursorGrid
+                cellSize={70}
+                color="#6d28d9"
+                radius={160}
+                falloff="smooth"
+                holdTime={400}
+                fadeDuration={800}
+                lineWidth={1.2}
+                maxOpacity={0.15}
+                fillOpacity={0}
+                gridOpacity={0}
+                cellRadius={0}
+                clickPulse
+                pulseSpeed={600}
+              />
+            </div>
           </div>
 
           <main className="min-h-screen pt-16 relative z-10">
