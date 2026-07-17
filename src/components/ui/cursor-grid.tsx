@@ -19,6 +19,7 @@ const hexToRgb = (hex: string) => {
 interface CursorGridProps {
   cellSize?: number;
   color?: string;
+  gridColor?: string;
   radius?: number;
   falloff?: 'linear' | 'smooth' | 'sharp';
   holdTime?: number;
@@ -36,6 +37,7 @@ interface CursorGridProps {
 export function CursorGrid({
   cellSize = 70,
   color = '#D946EF',
+  gridColor = '#ffffff',
   radius = 140,
   falloff = 'smooth',
   holdTime = 400,
@@ -57,6 +59,7 @@ export function CursorGrid({
   propsRef.current = {
     cellSize,
     color,
+    gridColor,
     radius,
     falloff,
     holdTime,
@@ -149,9 +152,10 @@ export function CursorGrid({
       lastFrame = now;
       ctx.clearRect(0, 0, w, h);
       const [cr, cg, cb] = hexToRgb(p.color);
+      const [gcr, gcg, gcb] = p.gridColor ? hexToRgb(p.gridColor) : [cr, cg, cb];
 
       if (p.gridOpacity > 0) {
-        ctx.strokeStyle = `rgba(${cr}, ${cg}, ${cb}, ${p.gridOpacity})`;
+        ctx.strokeStyle = `rgba(${gcr}, ${gcg}, ${gcb}, ${p.gridOpacity})`;
         ctx.lineWidth = 1;
         ctx.beginPath();
         for (let cCol = 0; cCol <= cols; cCol++) {

@@ -82,8 +82,9 @@ export default function RootLayout({
             
             <div className="absolute inset-0 z-[-1]">
               <CursorGrid
-                cellSize={70}
+                cellSize={64}
                 color="#6d28d9"
+                gridColor="#ffffff"
                 radius={160}
                 falloff="smooth"
                 holdTime={400}
@@ -91,7 +92,7 @@ export default function RootLayout({
                 lineWidth={1.2}
                 maxOpacity={0.15}
                 fillOpacity={0}
-                gridOpacity={0}
+                gridOpacity={0.03}
                 cellRadius={0}
                 clickPulse
                 pulseSpeed={600}
