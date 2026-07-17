@@ -73,6 +73,8 @@ export function SkillsSection() {
               glowColor="132, 0, 255"
               particleCount={15}
               textAutoHide={false}
+              enableTilt={true}
+              enableMagnetism={true}
             />
           </motion.div>
         </motion.div>
