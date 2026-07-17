@@ -300,7 +300,7 @@ const ParticleCard = ({
 };
 
 interface GlobalSpotlightProps {
-  gridRef: React.RefObject<HTMLDivElement>;
+  gridRef: React.RefObject<HTMLDivElement | null>;
   disableAnimations?: boolean;
   enabled?: boolean;
   spotlightRadius?: number;
@@ -439,7 +439,7 @@ const GlobalSpotlight = ({
   return null;
 };
 
-const BentoCardGrid = ({ children, gridRef }: { children: ReactNode; gridRef: React.RefObject<HTMLDivElement> }) => (
+const BentoCardGrid = ({ children, gridRef }: { children: ReactNode; gridRef: React.RefObject<HTMLDivElement | null> }) => (
   <div className="card-grid bento-section" ref={gridRef}>
     {children}
   </div>
