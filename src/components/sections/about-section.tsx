@@ -40,16 +40,15 @@ export function AboutSection() {
                 <ProfileCard
                   name="Biswajeet Bishoyi"
                   title="Civil Engineer & Designer"
-                  handle="biswajeet-bishoyi"
-                  status="Available for Work"
                   contactText="Get in Touch"
                   avatarUrl="/images/1784271769055.png"
                   miniAvatarUrl="/images/1784271769055.png"
+                  iconUrl="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 5l1.5 13.5L35 20l-13.5 1.5L20 35l-1.5-13.5L5 20l13.5-1.5z' fill='%23ffffff' fill-opacity='0.15'/%3E%3C/svg%3E"
                   showUserInfo
                   enableTilt={true}
                   enableMobileTilt
                   behindGlowEnabled
-                  innerGradient="linear-gradient(145deg, rgba(30, 30, 30, 0.4) 0%, rgba(100, 100, 150, 0.1) 100%)"
+                  innerGradient="linear-gradient(145deg, #0f172a 0%, #1e1b4b 100%)"
                 />
               </div>
 
