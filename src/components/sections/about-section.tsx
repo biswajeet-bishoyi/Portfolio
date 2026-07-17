@@ -40,6 +40,8 @@ export function AboutSection() {
                 <ProfileCard
                   name="Biswajeet Bishoyi"
                   title="Civil Engineer & Designer"
+                  handle="biswajeet-bishoyi"
+                  status="Available for Work"
                   contactText="Get in Touch"
                   avatarUrl="/images/1784271769055.png"
                   miniAvatarUrl="/images/1784271769055.png"
