@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { CheckCircle2 } from "lucide-react"
 import { fadeUp, staggerContainer } from "@/lib/animations"
+import { ProfileCard } from "@/components/ui/profile-card"
 
 const TRAITS = [
   "Analytical & Precise",
@@ -35,11 +36,20 @@ export function AboutSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column: Image & Stats */}
             <motion.div variants={fadeUp} className="lg:col-span-5 space-y-8">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative shadow-lg-dark">
-                <img 
-                  src="/images/my-photo.jpeg" 
-                  alt="Biswajeet Bishoyi"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              <div className="aspect-[0.718] w-full max-w-[400px] mx-auto lg:mx-0">
+                <ProfileCard
+                  name="Biswajeet Bishoyi"
+                  title="Civil Engineer & Designer"
+                  handle="biswajeet-bishoyi"
+                  status="Available for Work"
+                  contactText="Get in Touch"
+                  avatarUrl="/images/my-photo.jpeg"
+                  miniAvatarUrl="/images/my-photo.jpeg"
+                  showUserInfo
+                  enableTilt={true}
+                  enableMobileTilt
+                  behindGlowEnabled
+                  innerGradient="linear-gradient(145deg, rgba(30, 30, 30, 0.4) 0%, rgba(100, 100, 150, 0.1) 100%)"
                 />
               </div>
 
