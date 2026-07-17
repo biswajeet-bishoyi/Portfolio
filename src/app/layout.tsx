@@ -83,7 +83,7 @@ export default function RootLayout({
             <div className="absolute inset-0 z-[-1]">
               <CursorGrid
                 cellSize={64}
-                color="#6d28d9"
+                color="#ffffff"
                 gridColor="#ffffff"
                 radius={160}
                 falloff="smooth"
