@@ -1,55 +1,60 @@
 import type { Metadata } from "next";
-import { Sora, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
+import { WorkstationHeader } from "@/components/layout/workstation-header";
+import { WorkstationFooter } from "@/components/layout/workstation-footer";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
-import { CursorGrid } from "@/components/ui/cursor-grid";
 
-const sora = Sora({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-  variable: '--font-sora',
-  display: 'swap',
-});
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-dm-sans',
-  display: 'swap',
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
+  display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-mono',
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://biswajeetbishoyi.com'),
+  metadataBase: new URL("https://biswajeetbishoyi.com"),
   title: {
-    default: 'Biswajeet Bishoyi — Civil Engineer, Designer & Technologist',
-    template: '%s | Biswajeet Bishoyi'
+    default: "Biswajeet Bishoyi // SYS_ARCH - Civil Engineer, Computational Designer & Technologist",
+    template: "%s | Biswajeet Bishoyi",
   },
-  description: 'Portfolio of Biswajeet Bishoyi — B.Tech Civil Engineering student at SRMIST, graphic designer, and technology enthusiast from Bhubaneswar, India.',
-  keywords: ['civil engineer', 'portfolio', 'SRMIST', 'structural engineering', 'graphic design', 'web design', 'Bhubaneswar'],
-  authors: [{ name: 'Biswajeet Bishoyi' }],
-  creator: 'Biswajeet Bishoyi',
+  description:
+    "Engineering workstation portfolio of Biswajeet Bishoyi — B.Tech Civil Engineering student at SRMIST, computational designer, and software technologist. Exploring generative infrastructure, structural mechanics, and algorithmic design systems.",
+  keywords: [
+    "Biswajeet Bishoyi",
+    "Civil Engineering",
+    "Computational Design",
+    "Structural Analysis",
+    "FEA",
+    "BeamLab",
+    "SRMIST",
+    "Web Design",
+    "Three.js",
+    "Bhubaneswar",
+  ],
+  authors: [{ name: "Biswajeet Bishoyi" }],
+  creator: "Biswajeet Bishoyi",
   robots: { index: true, follow: true },
-  alternates: { canonical: 'https://biswajeetbishoyi.com' },
+  alternates: { canonical: "https://biswajeetbishoyi.com" },
   openGraph: {
-    type: 'website',
-    locale: 'en_IN',
-    url: 'https://biswajeetbishoyi.com',
-    siteName: 'Biswajeet Bishoyi',
-    title: 'Biswajeet Bishoyi — Civil Engineer, Designer & Technologist',
-    description: 'Portfolio of Biswajeet Bishoyi — B.Tech Civil Engineering student at SRMIST, graphic designer, and technology enthusiast from Bhubaneswar, India.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Biswajeet Bishoyi Portfolio' }]
-  }
+    type: "website",
+    locale: "en_IN",
+    url: "https://biswajeetbishoyi.com",
+    siteName: "Biswajeet Bishoyi // SYS_ARCH",
+    title: "Biswajeet Bishoyi // SYS_ARCH - Civil Engineer & Technologist",
+    description:
+      "Tectonic precision portfolio spanning civil engineering structural solvers, finite element tools, algorithmic design, and full-stack software development.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Biswajeet Bishoyi Workstation Portfolio" }],
+  },
 };
 
 export default function RootLayout({
@@ -58,54 +63,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className="scroll-smooth"
-    >
-      <body className={`${sora.variable} ${dmSans.variable} ${jetbrainsMono.variable} font-sans antialiased min-h-screen flex flex-col bg-background text-foreground`}>
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        />
+      </head>
+      <body
+        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased min-h-screen flex flex-col bg-[#0c0e12] text-[#e2e2e8] blueprint-grid`}
+      >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          forcedTheme="dark"
           disableTransitionOnChange
         >
-          <Navbar />
-          
-          {/* High-performance Premium Background */}
-          <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-background">
-            <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary/20 blur-[100px] animate-[spin_20s_linear_infinite] opacity-60 dark:opacity-20" />
-            <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-500/20 blur-[100px] animate-[spin_25s_linear_infinite_reverse] opacity-60 dark:opacity-20" />
-            
-            <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay"
-                 style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }} />
-            
-            <div className="absolute inset-0 z-[-1]">
-              <CursorGrid
-                cellSize={64}
-                color="#ffffff"
-                gridColor="#ffffff"
-                radius={160}
-                falloff="smooth"
-                holdTime={400}
-                fadeDuration={800}
-                lineWidth={1.2}
-                maxOpacity={0.4}
-                fillOpacity={0.02}
-                gridOpacity={0.03}
-                cellRadius={0}
-                clickPulse
-                pulseSpeed={600}
-              />
-            </div>
-          </div>
-
-          <main className="min-h-screen pt-16 relative z-10">
+          <WorkstationHeader />
+          <main className="flex-1 w-full max-w-[1440px] mx-auto px-4 md:px-6 xl:px-8 py-3 md:py-4 relative z-10">
             {children}
           </main>
-          
-          <Footer />
-          <Toaster />
+          <WorkstationFooter />
+          <Toaster position="bottom-right" richColors />
           <Analytics />
         </ThemeProvider>
       </body>
