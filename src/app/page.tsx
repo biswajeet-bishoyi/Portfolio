@@ -15,7 +15,7 @@ const STATIONS = [
     href: "/works",
     icon: Grid3X3,
     accent: "#ff5708",
-    tags: ["BeamLab", "Apex Precision 3D", "AI Soil Predictor", "FEA Tools"],
+    tags: ["BhuNetra AI", "BeamLab", "CivilVerse", "FinanceFlow", "Apex 3D"],
     desc: "Full catalog of engineering, computation, and 3D creative projects.",
   },
   {

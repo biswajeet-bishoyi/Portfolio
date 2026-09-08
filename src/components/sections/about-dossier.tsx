@@ -6,7 +6,7 @@ import { RiGithubFill, RiLinkedinBoxFill, RiTwitterXFill } from "react-icons/ri"
 
 const STATS = [
   { value: "3+", label: "Years Engineering Study", sub: "SRMIST Chennai" },
-  { value: "10+", label: "Design & Tech Projects", sub: "FEA, 3D & Web" },
+  { value: "16+", label: "Deployed Projects", sub: "FEA, Civil AI, 3D & Web" },
   { value: "2", label: "National Conferences", sub: "Civil & Environmental" },
   { value: "7+", label: "Years Graphic Practice", sub: "Brand & Vector Systems" }
 ];

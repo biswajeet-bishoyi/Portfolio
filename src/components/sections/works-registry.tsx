@@ -61,24 +61,80 @@ const PROJECTS: Project[] = [
     }
   },
   {
-    id: "apex-precision",
+    id: "bhunetra",
     prjCode: "PRJ_02",
+    wbsCode: "SIH:26018",
+    domain: "GEOSPATIAL / AI LAND TITLE VERIFICATION",
+    title: "BhuNetra AI // Land Record Sentinel",
+    category: "Engineering",
+    disciplineTag: "GEOSPATIAL / FASTAPI / CADASTRE",
+    shortDesc: "SIH 2026 AI-powered pre-mutation land record verification platform with 5-engine spatial topology, deed OCR, and satellite ground-truthing.",
+    fullDesc: "Developed for the Ministry of Rural Development under Smart India Hackathon (SIH 2026, PS SIH26018). An automated spatial and title verification decision-support platform integrating local VLM deed OCR, in-memory cadastral GIS topology checks (detecting overlaps, sliver gaps, and area calculation deviations), circular transaction ownership graph analysis, and Sentinel-2 L2A satellite land-use verification to eliminate land disputes prior to mutation.",
+    image: "/images/bhunetra.png",
+    tags: ["Python", "FastAPI", "Cadastral GIS", "Sentinel-2", "Graph AI", "Civil Tech"],
+    metrics: [
+      { label: "CORE ENGINES", value: "5-Engine Ensemble" },
+      { label: "TOPOLOGY", value: "Cadastral Overlaps & Gaps" },
+      { label: "SATELLITE", value: "Sentinel-2 L2A Multispectral" }
+    ],
+    dimBar: {
+      section: "§ 02-B",
+      primary: "BHUNETRA_AI // SIH:26018",
+      secondary: "CADASTRAL TOPOLOGY & DEED OCR",
+      tertiary: "SENTINEL-2 L2A // GRAPH VERIFY"
+    },
+    links: {
+      live: "https://bhunetra-frontend-production.up.railway.app",
+      github: "https://github.com/biswajeet-bishoyi/BhuNetra"
+    }
+  },
+  {
+    id: "civilverse",
+    prjCode: "PRJ_03",
+    wbsCode: "CIVIL.TECH",
+    domain: "CIVIL TECH / KNOWLEDGE GRAPH & SOLVER",
+    title: "CivilVerse // AI Knowledge Universe",
+    category: "Engineering",
+    disciplineTag: "NEXT.JS / ARCHIE AI / CALCULATORS",
+    shortDesc: "AI-first civil engineering exploration suite featuring 19 megaproject case studies, live SFD/BMD solvers, mix design calculators, and Archie AI.",
+    fullDesc: "An exhaustive civil engineering platform uniting a 19-megaproject case study database (Burj Khalifa, Chenab Railway Bridge, Gotthard Base Tunnel), interactive structural calculators (simply supported & cantilever beam SFD/BMD solvers, IS 10262:2019 concrete mix proportioner, rebar BBS estimator, Terzaghi soil bearing capacity), Archie AI with photographic Engineering X-Ray diagnostics, and multi-code standards comparisons (IS 456 vs ACI 318 vs Eurocode 2).",
+    image: "/images/civilverse.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Archie AI", "Structural Calculators", "IS:456"],
+    metrics: [
+      { label: "MEGAPROJECTS", value: "19 Global Case Studies" },
+      { label: "CALCULATORS", value: "SFD / BMD / Mix / BBS" },
+      { label: "DIAGNOSTICS", value: "Archie AI Engineering X-Ray" }
+    ],
+    dimBar: {
+      section: "§ 03-C",
+      primary: "CIVILVERSE // MULTI-SYSTEM",
+      secondary: "19 MEGAPROJECTS & SFD/BMD",
+      tertiary: "ARCHIE AI // IS:10262 & IS:456"
+    },
+    links: {
+      live: "https://civilverse.vercel.app",
+      github: "https://github.com/biswajeet-bishoyi/CivilVerse"
+    }
+  },
+  {
+    id: "apex-precision",
+    prjCode: "PRJ_04",
     wbsCode: "THREE.JS",
     domain: "3D / INTERACTIVE RENDER ENGINE",
     title: "Apex Precision: Max Verstappen 3D",
     category: "3D & Creative",
     disciplineTag: "THREE.JS / WEBGL / GSAP",
     shortDesc: "High-octane interactive 3D web experience with scroll-linked camera choreography around a detailed RB20 model.",
-    fullDesc: "A highly cinematic, interactive 3D web experience celebrating Max Verstappen. Built with Three.js and React Three Fiber, featuring scroll-linked camera choreography around a detailed 3D model of the RB20, dynamic depth of field, and minimalist typography.",
+    fullDesc: "A highly cinematic, interactive 3D web experience celebrating Max Verstappen. Built with Three.js and React Three Fiber, featuring scroll-linked camera choreography around a detailed 3D model of the RB20, dynamic depth of field, telemetry HUD graphics, and minimalist Swiss typography.",
     image: "/images/apex.png",
     tags: ["Three.js", "React Three Fiber", "GSAP", "Next.js", "WebGL"],
     metrics: [
       { label: "FRAMEWORK", value: "R3F / Three.js" },
       { label: "RENDER", value: "60 FPS WebGL" },
-      { label: "CAMERA", value: "Scroll-Linked" }
+      { label: "CAMERA", value: "Scroll-Linked Choreography" }
     ],
     dimBar: {
-      section: "§ 02-B",
+      section: "§ 04-D",
       primary: "RB20_ApexPrecision // 60 FPS",
       secondary: "CAMERA_CHOREOGRAPHY",
       tertiary: "R3F RENDER: 60 FPS @ 1080p"
@@ -89,8 +145,36 @@ const PROJECTS: Project[] = [
     }
   },
   {
+    id: "financeflow",
+    prjCode: "PRJ_05",
+    wbsCode: "FINTECH.V1",
+    domain: "FINTECH / ALGORITHMIC RUNWAY",
+    title: "FinanceFlow // Runway Manager",
+    category: "Technology",
+    disciplineTag: "NEXT.JS 16 / SUPABASE / PRISMA",
+    shortDesc: "Student pocket money & safe-to-spend runway manager featuring mathematical daily allowance calculation and 'Can I Afford This?' purchase simulator.",
+    fullDesc: "An intelligent personal finance manager tailored specifically for students and young adults living on discrete monthly allowances. Solves the month-end cash crunch through an exact mathematical safe-to-spend daily algorithm, emergency reserve shielding, interactive What-If financial scenario modeling, and gamified financial health scoring.",
+    image: "/images/financeflow.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Prisma", "Fintech"],
+    metrics: [
+      { label: "ALGORITHM", value: "Daily Runway Solver" },
+      { label: "SIMULATOR", value: "Can I Afford This?" },
+      { label: "DATA LAYER", value: "Supabase + Prisma ORM" }
+    ],
+    dimBar: {
+      section: "§ 05-E",
+      primary: "FINANCE_FLOW_V1 // RUNWAY ENGINE",
+      secondary: "SAFE-TO-SPEND / DAY SOLVER",
+      tertiary: "DYNAMIC RESERVE SHIELD // PRISMA"
+    },
+    links: {
+      live: "https://finance-flow-mngr.vercel.app",
+      github: "https://github.com/biswajeet-bishoyi/FinanceFlow"
+    }
+  },
+  {
     id: "soil-property-predictor",
-    prjCode: "PRJ_03",
+    prjCode: "PRJ_06",
     wbsCode: "IS:2720",
     domain: "ML / GEOTECHNICAL ANALYSIS",
     title: "AI Geotechnical Soil Predictor",
@@ -98,15 +182,15 @@ const PROJECTS: Project[] = [
     disciplineTag: "ML / TENSORFLOW / GEOTECH",
     shortDesc: "Neural geotechnical analysis tool predicting 6 critical soil properties with interactive Boussinesq stress bulb visualization.",
     fullDesc: "A geotechnical analysis tool that predicts six critical soil properties using TensorFlow.js. It features interactive Boussinesq stress bulb visualization and a foundation recommendation system. Built entirely in the browser for maximum speed and privacy.",
-    image: "/images/soil-app.jpeg",
+    image: "/images/soil-app.png",
     tags: ["JavaScript", "TensorFlow.js", "Chart.js", "Geotechnical Analysis"],
     metrics: [
       { label: "ACCURACY", value: "94.2% R²" },
       { label: "PROPERTIES", value: "6 Parameters" },
-      { label: "VISUALIZER", value: "Boussinesq Bulbs" }
+      { label: "VISUALIZER", value: "Boussinesq Stress Bulbs" }
     ],
     dimBar: {
-      section: "§ 03-C",
+      section: "§ 06-F",
       primary: "GEOTECH_ML_V2 // IS:2720",
       secondary: "BOUSSINESQ STRESS BULB",
       tertiary: "R²: 0.942 // FOUNDATION TYPE"
@@ -118,7 +202,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "concrete-strength-predictor",
-    prjCode: "PRJ_04",
+    prjCode: "PRJ_07",
     wbsCode: "IS:10262",
     domain: "MATERIALS / ML REGRESSION",
     title: "Concrete Compressive Strength ML",
@@ -134,7 +218,7 @@ const PROJECTS: Project[] = [
       { label: "DEPLOY", value: "Streamlit Cloud" }
     ],
     dimBar: {
-      section: "§ 04-D",
+      section: "§ 07-G",
       primary: "CONCRETE_ML_V1 // IS:10262",
       secondary: "MIX DESIGN OPTIMIZATION",
       tertiary: "RANDOM FOREST // LINREG"
@@ -146,7 +230,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "seepage-flow-simulator",
-    prjCode: "PRJ_05",
+    prjCode: "PRJ_08",
     wbsCode: "IS:12183",
     domain: "HYDRAULICS / EARTH DAM SIM",
     title: "Earth Dam Seepage Simulator",
@@ -162,7 +246,7 @@ const PROJECTS: Project[] = [
       { label: "DOMAIN", value: "Hydraulic Eng" }
     ],
     dimBar: {
-      section: "§ 05-E",
+      section: "§ 08-H",
       primary: "SEEPAGE_DAM_V1 // IS:12183",
       secondary: "PHREATIC SURFACE COMPUTE",
       tertiary: "HYDRAULIC GRADIENT: 0.38"
@@ -173,8 +257,144 @@ const PROJECTS: Project[] = [
     }
   },
   {
+    id: "campus-map-3d",
+    prjCode: "PRJ_09",
+    wbsCode: "WGS:84",
+    domain: "GEOSPATIAL / 3D DIGITAL TWIN",
+    title: "SRM KTR 3D Campus Digital Twin",
+    category: "3D & Creative",
+    disciplineTag: "THREE.JS / REACT / GEOJSON",
+    shortDesc: "Reactive 3D campus exploration & pathfinding digital twin converting WGS84 coordinates to local ENU Cartesian scene.",
+    fullDesc: "A high-performance reactive 3D campus exploration and pedestrian pathfinding digital twin built for SRMIST Chennai (400-acre campus). Implements dynamic coordinate transform from global WGS84 GeoJSON data into local East-North-Up (ENU) Cartesian space, real-time Dijkstra/A* walking route generation, and interactive telemetry cards for key academic buildings.",
+    image: "/images/campus-map-3d.png",
+    tags: ["Three.js", "React", "GeoJSON", "WGS84", "Pathfinding", "Digital Twin"],
+    metrics: [
+      { label: "CAMPUS AREA", value: "400 Acres Mapped" },
+      { label: "GEODESY", value: "WGS84 -> ENU Transform" },
+      { label: "RENDER", value: "Three.js 60 FPS" }
+    ],
+    dimBar: {
+      section: "§ 09-I",
+      primary: "SRM_KTR_3D // WGS84 ENU",
+      secondary: "CAMPUS DIGITAL TWIN",
+      tertiary: "REAL-TIME ROUTE DISCOVERY"
+    },
+    links: {
+      github: "https://github.com/biswajeet-bishoyi"
+    }
+  },
+  {
+    id: "smarthealth",
+    prjCode: "PRJ_10",
+    wbsCode: "SIH:HEALTH",
+    domain: "PUBLIC HEALTH / REAL-TIME TELEMETRY",
+    title: "SmartHealthNE // Early Warning System",
+    category: "Technology",
+    disciplineTag: "NODE.JS / MONGO / SOCKET.IO",
+    shortDesc: "Smart India Hackathon prototype for rural public health monitoring and water-borne disease outbreak early warning.",
+    fullDesc: "Community health reporting and environmental risk early warning platform designed for rural Northeast India. Focuses on water-related contamination risks, early outbreak detection through real-time epidemiological telemetry, multi-tier health worker verification workflows, and instant public alert broadcasts via Socket.IO.",
+    image: "/images/smarthealth.png",
+    tags: ["Node.js", "Express", "MongoDB", "Socket.IO", "GIS Mapping", "Public Health"],
+    metrics: [
+      { label: "PROTOCOL", value: "Socket.IO Live Sync" },
+      { label: "SURVEILLANCE", value: "Water Contamination Alerts" },
+      { label: "AUDIT CHAIN", value: "Health Worker RBAC" }
+    ],
+    dimBar: {
+      section: "§ 10-J",
+      primary: "SMARTHEALTH_NE // SIH PROTOTYPE",
+      secondary: "WATER RISK & OUTBREAK WARNING",
+      tertiary: "REAL-TIME SOCKET.IO // RBAC"
+    },
+    links: {
+      live: "https://smarthealthne-frontend.onrender.com",
+      github: "https://github.com/biswajeet-bishoyi/SmartHealth"
+    }
+  },
+  {
+    id: "alphaedge",
+    prjCode: "PRJ_11",
+    wbsCode: "ALPHA:QUANT",
+    domain: "FINTECH / QUANTITATIVE PREDICTION",
+    title: "AlphaEdge // Quantitative Market AI",
+    category: "Technology",
+    disciplineTag: "NEXT.JS / PYTHON / QUANT",
+    shortDesc: "Quantitative stock market analytics platform with multi-timeframe candlestick modeling, Monte Carlo cones, and technical indicators.",
+    fullDesc: "A high-performance quantitative trading and market intelligence workstation. Features interactive multi-timeframe candlestick charting, Monte Carlo 48-hour forward probability distribution cones, automated technical indicators (RSI, MACD bullish crossovers, 30-day volatility), and real-time portfolio risk analytics.",
+    image: "/images/alphaedge.png",
+    tags: ["TypeScript", "Python", "Quantitative Finance", "Monte Carlo", "Next.js"],
+    metrics: [
+      { label: "PROBABILITY", value: "Monte Carlo Cones" },
+      { label: "TELEMETRY", value: "RSI / MACD / Volatility" },
+      { label: "SHARPE RATIO", value: "2.41 Risk Measure" }
+    ],
+    dimBar: {
+      section: "§ 11-K",
+      primary: "ALPHAEDGE // QUANT ENGINE",
+      secondary: "MONTE CARLO PROBABILITY CONE",
+      tertiary: "REAL-TIME TECHNICAL INDICATORS"
+    },
+    links: {
+      github: "https://github.com/biswajeet-bishoyi"
+    }
+  },
+  {
+    id: "hydrosense-iot",
+    prjCode: "PRJ_12",
+    wbsCode: "IOT:ARDUINO",
+    domain: "IOT / EMBEDDED CIVIL TELEMETRY",
+    title: "HydroSense IoT // Water Telemetry System",
+    category: "Engineering",
+    disciplineTag: "EMBEDDED C++ / ARDUINO / TELEMETRY",
+    shortDesc: "Microcontroller-based ultrasonic reservoir depth monitoring with multi-tier LED alert signaling and automated pump relay logic.",
+    fullDesc: "An embedded civil engineering telemetry and water management system. Powered by Arduino microcontrollers and ultrasonic sensors reading liquid depths in real-time, executing multi-tier automated threshold alerting (Low: Red, Nominal: Yellow, High: Blue), dynamic pump relay control switches, and live serial telemetry logging.",
+    image: "/images/hydrosense-iot.png",
+    tags: ["Arduino", "Embedded C++", "IoT Telemetry", "Water Systems", "Sensors"],
+    metrics: [
+      { label: "TELEMETRY", value: "Real-time Depth Sensing" },
+      { label: "ALERT MATRIX", value: "3-Tier LED Thresholds" },
+      { label: "AUTOMATION", value: "Pump Relay Control" }
+    ],
+    dimBar: {
+      section: "§ 12-L",
+      primary: "HYDROSENSE_IOT // ARDUINO 9600",
+      secondary: "RESERVOIR DEPTH MONITOR",
+      tertiary: "PUMP RELAY // MULTI-TIER LED"
+    },
+    links: {
+      github: "https://github.com/biswajeet-bishoyi"
+    }
+  },
+  {
+    id: "car-rental",
+    prjCode: "PRJ_13",
+    wbsCode: "SPRING:REACT",
+    domain: "FULL-STACK / FLEET MANAGEMENT",
+    title: "ApexDrive // Mobility & Fleet Portal",
+    category: "Technology",
+    disciplineTag: "SPRING BOOT / REACT / POSTGRESQL",
+    shortDesc: "Enterprise vehicle reservation and fleet management system with dynamic timeline scheduling and multi-currency pricing.",
+    fullDesc: "A modern vehicle rental and fleet operations portal featuring vehicle availability tracking, date-range reservation scheduling, real-time fleet telemetry, and full-stack REST API architecture built with Java Spring Boot and React.",
+    image: "/images/car-rental.png",
+    tags: ["Java", "Spring Boot", "React", "PostgreSQL", "REST API"],
+    metrics: [
+      { label: "BACKEND", value: "Spring Boot REST API" },
+      { label: "FRONTEND", value: "React Fleet Portal" },
+      { label: "SCHEDULING", value: "Dynamic Timeline Engine" }
+    ],
+    dimBar: {
+      section: "§ 13-M",
+      primary: "APEXDRIVE // SPRING BOOT",
+      secondary: "FLEET MOBILITY & RESERVATIONS",
+      tertiary: "REST API // DYNAMIC PRICING"
+    },
+    links: {
+      github: "https://github.com/biswajeet-bishoyi"
+    }
+  },
+  {
     id: "ophwc-project",
-    prjCode: "PRJ_06",
+    prjCode: "PRJ_14",
     wbsCode: "OPHWC.IN",
     domain: "CIVIL / SITE EXEC & TENDERING",
     title: "OPHWC Civil Infrastructure Project",
@@ -190,7 +410,7 @@ const PROJECTS: Project[] = [
       { label: "SITE", value: "Excise Bhawan" }
     ],
     dimBar: {
-      section: "§ 06-F",
+      section: "§ 14-N",
       primary: "OPHWC_2025 // AUTOCAD DWG",
       secondary: "COST ESTIMATION: 3 BUS STANDS",
       tertiary: "TENDER BID: IS:TENDER-CALC"
@@ -201,7 +421,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "sustainable-concrete",
-    prjCode: "PRJ_07",
+    prjCode: "PRJ_15",
     wbsCode: "IS:456",
     domain: "MATERIAL RESEARCH / SCM REPLACEMENT",
     title: "Sustainable Concrete Research",
@@ -217,12 +437,40 @@ const PROJECTS: Project[] = [
       { label: "STATUS", value: "Experimental Study" }
     ],
     dimBar: {
-      section: "§ 07-G",
+      section: "§ 15-O",
       primary: "SCM_RESEARCH // IS:456",
       secondary: "PARTIAL CEMENT REPLACEMENT",
       tertiary: "FLY ASH + GGBS // 28 DAY"
     },
     links: {}
+  },
+  {
+    id: "german-inventions",
+    prjCode: "PRJ_16",
+    wbsCode: "INVENT.DE",
+    domain: "HISTORICAL TECH / SWISS TYPOGRAPHY",
+    title: "German Inventions Visual Retrospective",
+    category: "3D & Creative",
+    disciplineTag: "HTML5 / CSS3 / SWISS TYPOGRAPHY",
+    shortDesc: "Interactive engineering & scientific retrospective chronicling groundbreaking German industrial inventions from the printing press to the automobile.",
+    fullDesc: "An educational visual retrospective highlighting transformative inventions from Gutenberg's printing press to Karl Benz's motorwagen and Roentgen's X-ray tubes. Explores the convergence of industrial design, scientific discovery, and modern typography.",
+    image: "/images/german-inventions.png",
+    tags: ["HTML5", "CSS3", "Industrial Design", "Swiss Grid", "History of Tech"],
+    metrics: [
+      { label: "THEME", value: "Industrial Milestones" },
+      { label: "DISCIPLINE", value: "Typography & Layout" },
+      { label: "DEPLOY", value: "GitHub Pages" }
+    ],
+    dimBar: {
+      section: "§ 16-P",
+      primary: "GERMAN_INVENTIONS // RETRO",
+      secondary: "INDUSTRIAL DISCOVERY CATALOG",
+      tertiary: "GUTENBERG / BENZ / ROENTGEN"
+    },
+    links: {
+      live: "https://biswajeet-bishoyi.github.io/German-Inventions/",
+      github: "https://github.com/biswajeet-bishoyi/German-Inventions"
+    }
   }
 ];
 
