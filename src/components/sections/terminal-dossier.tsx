@@ -89,7 +89,7 @@ export function TerminalDossier() {
     if (cmd === "HELP") {
       response = "AVAILABLE COMMANDS: HELP, PROJECTS, CAT CV.MD, PING BISWAJEET, STACK, CLEAR";
     } else if (cmd === "PROJECTS") {
-      response = "16 ACTIVE WORKS: [PRJ_01] BeamLab, [PRJ_02] BhuNetra AI, [PRJ_03] CivilVerse, [PRJ_04] Apex Precision, [PRJ_05] FinanceFlow, [PRJ_06] Soil Predictor, [PRJ_07] Concrete ML, [PRJ_08] Dam Seepage, [PRJ_09] SRM KTR 3D Map, [PRJ_10] SmartHealthNE, [PRJ_11] AlphaEdge, [PRJ_12] HydroSense IoT, [PRJ_13] ApexDrive, [PRJ_14] OPHWC, [PRJ_15] SCM Research, [PRJ_16] German Inventions";
+      response = "15 ACTIVE WORKS: [PRJ_01] BeamLab, [PRJ_02] BhuNetra AI, [PRJ_03] CivilVerse, [PRJ_04] Apex Precision, [PRJ_05] FinanceFlow, [PRJ_06] Soil Predictor, [PRJ_07] Concrete ML, [PRJ_08] Dam Seepage, [PRJ_09] SRM KTR 3D Map, [PRJ_10] SmartHealthNE, [PRJ_11] AlphaEdge, [PRJ_12] HydroSense IoT, [PRJ_13] OPHWC, [PRJ_14] SCM Research, [PRJ_15] German Inventions";
     } else if (cmd === "CAT CV.MD") {
       response = "RESUME: Biswajeet Bishoyi | SRMIST Civil '28 | Skills: AutoCAD, STAAD, Python, JS, Three.js, Figma";
     } else if (cmd === "PING BISWAJEET") {

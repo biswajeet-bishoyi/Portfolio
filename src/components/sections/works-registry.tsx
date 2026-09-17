@@ -366,35 +366,8 @@ const PROJECTS: Project[] = [
     }
   },
   {
-    id: "car-rental",
-    prjCode: "PRJ_13",
-    wbsCode: "SPRING:REACT",
-    domain: "FULL-STACK / FLEET MANAGEMENT",
-    title: "ApexDrive // Mobility & Fleet Portal",
-    category: "Technology",
-    disciplineTag: "SPRING BOOT / REACT / POSTGRESQL",
-    shortDesc: "Enterprise vehicle reservation and fleet management system with dynamic timeline scheduling and multi-currency pricing.",
-    fullDesc: "A modern vehicle rental and fleet operations portal featuring vehicle availability tracking, date-range reservation scheduling, real-time fleet telemetry, and full-stack REST API architecture built with Java Spring Boot and React.",
-    image: "/images/car-rental.png",
-    tags: ["Java", "Spring Boot", "React", "PostgreSQL", "REST API"],
-    metrics: [
-      { label: "BACKEND", value: "Spring Boot REST API" },
-      { label: "FRONTEND", value: "React Fleet Portal" },
-      { label: "SCHEDULING", value: "Dynamic Timeline Engine" }
-    ],
-    dimBar: {
-      section: "§ 13-M",
-      primary: "APEXDRIVE // SPRING BOOT",
-      secondary: "FLEET MOBILITY & RESERVATIONS",
-      tertiary: "REST API // DYNAMIC PRICING"
-    },
-    links: {
-      github: "https://github.com/biswajeet-bishoyi"
-    }
-  },
-  {
     id: "ophwc-project",
-    prjCode: "PRJ_14",
+    prjCode: "PRJ_13",
     wbsCode: "OPHWC.IN",
     domain: "CIVIL / SITE EXEC & TENDERING",
     title: "OPHWC Civil Infrastructure Project",
@@ -410,7 +383,7 @@ const PROJECTS: Project[] = [
       { label: "SITE", value: "Excise Bhawan" }
     ],
     dimBar: {
-      section: "§ 14-N",
+      section: "§ 13-M",
       primary: "OPHWC_2025 // AUTOCAD DWG",
       secondary: "COST ESTIMATION: 3 BUS STANDS",
       tertiary: "TENDER BID: IS:TENDER-CALC"
@@ -421,7 +394,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "sustainable-concrete",
-    prjCode: "PRJ_15",
+    prjCode: "PRJ_14",
     wbsCode: "IS:456",
     domain: "MATERIAL RESEARCH / SCM REPLACEMENT",
     title: "Sustainable Concrete Research",
@@ -437,7 +410,7 @@ const PROJECTS: Project[] = [
       { label: "STATUS", value: "Experimental Study" }
     ],
     dimBar: {
-      section: "§ 15-O",
+      section: "§ 14-N",
       primary: "SCM_RESEARCH // IS:456",
       secondary: "PARTIAL CEMENT REPLACEMENT",
       tertiary: "FLY ASH + GGBS // 28 DAY"
@@ -446,7 +419,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "german-inventions",
-    prjCode: "PRJ_16",
+    prjCode: "PRJ_15",
     wbsCode: "INVENT.DE",
     domain: "HISTORICAL TECH / SWISS TYPOGRAPHY",
     title: "German Inventions Visual Retrospective",
@@ -462,7 +435,7 @@ const PROJECTS: Project[] = [
       { label: "DEPLOY", value: "GitHub Pages" }
     ],
     dimBar: {
-      section: "§ 16-P",
+      section: "§ 15-O",
       primary: "GERMAN_INVENTIONS // RETRO",
       secondary: "INDUSTRIAL DISCOVERY CATALOG",
       tertiary: "GUTENBERG / BENZ / ROENTGEN"
@@ -507,6 +480,26 @@ export function WorksRegistry() {
     const interval = setInterval(updateClock, 1000);
     return () => clearInterval(interval);
   }, []);
+
+  // Lock body scroll and listen for Escape when modal is active
+  React.useEffect(() => {
+    if (!selectedProject) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedProject(null);
+      }
+    };
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedProject]);
 
   const handleDirectDispatch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -1299,13 +1292,21 @@ export function WorksRegistry() {
 
       {/* PROJECT SPECIFICATION MODAL */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="border border-[#434655] bg-[#0c0e12] max-w-2xl w-full p-6 relative max-h-[90vh] overflow-y-auto crosshair-corner shadow-2xl">
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/85 backdrop-blur-md overflow-y-auto"
+          onClick={() => setSelectedProject(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div 
+            className="border border-[#434655] bg-[#0c0e12] max-w-2xl w-full p-5 sm:p-6 relative my-auto max-h-[82vh] overflow-y-auto crosshair-corner shadow-2xl animate-in fade-in zoom-in-95 duration-150"
+            onClick={(e) => e.stopPropagation()}
+          >
             
             {/* Modal Header */}
             <div className="flex justify-between items-start border-b border-[#434655] pb-3 mb-4">
               <div>
-                <div className="font-mono text-xs text-[#2e6bff] uppercase font-bold">
+                <div className="font-mono text-xs text-[#2e6bff] uppercase font-bold tracking-wider">
                   PROJECT SPECIFICATION // {selectedProject.id.toUpperCase()}
                 </div>
                 <h2 className="font-title text-xl font-bold text-white mt-1">
@@ -1314,14 +1315,15 @@ export function WorksRegistry() {
               </div>
               <button
                 onClick={() => setSelectedProject(null)}
-                className="p-1 border border-[#434655] bg-[#1a1c20] text-[#8d90a1] hover:text-white font-mono text-xs font-bold"
+                className="px-2 py-1 border border-[#434655] bg-[#1a1c20] text-[#8d90a1] hover:text-white hover:border-[#ff5708] transition-colors font-mono text-xs font-bold"
+                aria-label="Close modal"
               >
                 ✕ CLOSE
               </button>
             </div>
 
             {/* Media Image */}
-            <div className="aspect-video w-full overflow-hidden bg-[#1a1c20] border border-[#434655] mb-4">
+            <div className="w-full max-h-56 sm:max-h-64 overflow-hidden bg-[#1a1c20] border border-[#434655] mb-4 flex items-center justify-center">
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
