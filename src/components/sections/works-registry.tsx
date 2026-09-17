@@ -1293,20 +1293,20 @@ export function WorksRegistry() {
       {/* PROJECT SPECIFICATION MODAL */}
       {selectedProject && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/85 backdrop-blur-md overflow-y-auto"
+          className="fixed inset-x-0 top-14 bottom-0 z-40 flex items-center justify-center p-4 md:p-6 bg-black/80 backdrop-blur-sm"
           onClick={() => setSelectedProject(null)}
           role="dialog"
           aria-modal="true"
         >
           <div 
-            className="border border-[#434655] bg-[#0c0e12] max-w-2xl w-full p-5 sm:p-6 relative my-auto max-h-[82vh] overflow-y-auto crosshair-corner shadow-2xl animate-in fade-in zoom-in-95 duration-150"
+            className="border border-[#434655] bg-[#0c0e12] max-w-2xl w-full p-6 relative max-h-[calc(100vh-6rem)] overflow-y-auto overflow-x-hidden crosshair-corner shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             
             {/* Modal Header */}
             <div className="flex justify-between items-start border-b border-[#434655] pb-3 mb-4">
               <div>
-                <div className="font-mono text-xs text-[#2e6bff] uppercase font-bold tracking-wider">
+                <div className="font-mono text-xs text-[#2e6bff] uppercase font-bold">
                   PROJECT SPECIFICATION // {selectedProject.id.toUpperCase()}
                 </div>
                 <h2 className="font-title text-xl font-bold text-white mt-1">
@@ -1315,7 +1315,7 @@ export function WorksRegistry() {
               </div>
               <button
                 onClick={() => setSelectedProject(null)}
-                className="px-2 py-1 border border-[#434655] bg-[#1a1c20] text-[#8d90a1] hover:text-white hover:border-[#ff5708] transition-colors font-mono text-xs font-bold"
+                className="p-1 border border-[#434655] bg-[#1a1c20] text-[#8d90a1] hover:text-white font-mono text-xs font-bold"
                 aria-label="Close modal"
               >
                 ✕ CLOSE
@@ -1323,7 +1323,7 @@ export function WorksRegistry() {
             </div>
 
             {/* Media Image */}
-            <div className="w-full max-h-56 sm:max-h-64 overflow-hidden bg-[#1a1c20] border border-[#434655] mb-4 flex items-center justify-center">
+            <div className="aspect-video w-full overflow-hidden bg-[#1a1c20] border border-[#434655] mb-4">
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
